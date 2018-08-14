@@ -61,6 +61,7 @@ class Libspatialite < Formula
       --prefix=#{prefix}
       --with-sysroot=#{HOMEBREW_PREFIX}
       --enable-geocallbacks
+      --enable-rttopo=yes
     ]
 
     system "./configure", *args
