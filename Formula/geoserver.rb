@@ -13,7 +13,7 @@ class Geoserver < Formula
       if [ -z "$1" ]; then
         echo "Usage: $ geoserver path/to/data/dir"
       else
-        cd "#{libexec}" && java -DGEOSERVER_DATA_DIR=$1 -jar start.jar
+        cd "#{libexec}" && java -Dorg.geotools.shapefile.datetime=true -Duser.timezone=GMT -DGEOSERVER_DATA_DIR=$1 -jar start.jar
       fi
     EOS
   end
